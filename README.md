@@ -1,5 +1,5 @@
 # PwnedPwd
-Your Plex, your way
+Have my passwords been compromised?
 
 [![Latest
 Version](https://img.shields.io/pypi/v/pwnedpwd.svg)](https://pypi.python.org/pypi/pwnedpwd)
