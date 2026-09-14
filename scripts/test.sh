@@ -2,5 +2,6 @@
 
 set -ex
 
-flake8
-mypy --check-untyped-defs pwnedpwd
+ruff check .
+ruff format --check .
+mypy pwnedpwd

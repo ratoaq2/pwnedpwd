@@ -6,7 +6,7 @@ Version](https://img.shields.io/pypi/v/pwnedpwd.svg)](https://pypi.python.org/py
 
 [![tests](https://github.com/ratoaq2/pwnedpwd/actions/workflows/test.yml/badge.svg)](https://github.com/ratoaq2/pwnedpwd/actions/workflows/test.yml)
 
-[![License](https://img.shields.io/github/license/ratoaq2/pwnedpwd.svg)](https://github.com/ratoaq2/pwnedpwd/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/ratoaq2/pwnedpwd.svg)](https://github.com/ratoaq2/pwnedpwd/blob/main/LICENSE)
 
   - Project page  
     <https://github.com/ratoaq2/pwnedpwd>
@@ -14,7 +14,7 @@ Version](https://img.shields.io/pypi/v/pwnedpwd.svg)](https://pypi.python.org/py
 ## Info
 
 **PwnedPwd** is a tiny CLI tool which uses the **online** service [Pwned Passwords](https://haveibeenpwned.com/API/v3#PwnedPasswords) to check
-whether a given password have been compromised in known data breaches. Credits to [Troy Hunt](https://www.troyhunt.com/) for hosting such service.
+whether a given password has been compromised in known data breaches. Credits to [Troy Hunt](https://www.troyhunt.com/) for hosting such service.
 
 
 ## How it works?
@@ -55,8 +55,22 @@ Detailed information can be found
 
 ## Installation
 
+Using [uv](https://docs.astral.sh/uv/) (recommended):
+
 ```bash
-$ [sudo] pip install pwnedpwd
+$ uv tool install pwnedpwd
+```
+
+Or run it without installing:
+
+```bash
+$ uvx pwnedpwd
+```
+
+Using pip:
+
+```bash
+$ pip install pwnedpwd
 ```
 
 ## Usage
@@ -71,4 +85,13 @@ Password: ******
 $ pwnedpwd
 Password: 12345
 [BAD] Password appeared 2570791 times in data breaches. (source https://haveibeenpwned.com/Passwords)
+```
+
+## Development
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management, [ruff](https://docs.astral.sh/ruff/) for linting/formatting and [mypy](https://mypy-lang.org/) for type checking.
+
+```bash
+$ uv sync
+$ uv run bash scripts/test.sh
 ```
